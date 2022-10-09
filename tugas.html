@@ -68,13 +68,14 @@
             <div class="row">
               <div class="col input-group">
                 <input
-                  type="text"
+                  type="password"
                   class="form-control"
                   placeholder="Password"
+                  id="password"
                 />
               </div>
               <div class="col input-group">
-                <input type="text" class="form-control" placeholder="Confirm" />
+                <input type="password" class="form-control" placeholder="Confirm"/>
               </div>
               <div id="emailHelp" class="form-text ps-4 mb-3">
                 Use 8 or more characters with a mix of letters,numbers & symbols
@@ -82,7 +83,7 @@
             </div>
             <div class="row justify-content-start">
               <div class="col form-check ps-5 mb-5">
-                <input type="checkbox" class="form-check-input" />
+                <input type="checkbox" class="form-check-input" onclick="myFunction()"/>
                 <label class="form-check-label" for="flexCheckDefault">
                   Show password
                 </label>
@@ -151,5 +152,16 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+    </script>
   </body>
 </html>
